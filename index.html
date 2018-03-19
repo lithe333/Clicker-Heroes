@@ -33,10 +33,8 @@
 							<div id="TP">TP: 2.0000%</div>
 							<br><input type="checkbox" id="reserveAS" class="checkbox" onclick="refresh()">unchecked checkbox
 							<br><input type="checkbox" id="beta" class="checkbox" checked onclick="refresh()">checked checkbox
-                            <br><input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()">Dark Theme
+                            				<br><input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()">Dark Theme
 							<br><button id="calculateButton" onclick="refresh()">Calculate</button>
-							<textarea id="savegame" placeholder="Place holder text" autofocus onclick="this.focus();this.select()" onblur="readSave()"></textarea>
-							<hr>
 							<hr>
 							<button id="showAdvanced" onclick="showAdvancedClick()">Show Advanced Settings</button>
 							<div id="advancedSettings">
@@ -130,8 +128,6 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/pako-bundle.min.js"></script>
-		<script src="js/readSave.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
