@@ -8,7 +8,8 @@ a {
 
 .boxes > div > div {
 	//border-color: #a0b0c0;
-	border-color: #888;
+	//border-color: #888;
+	border-color: #7a7;
     	background-color: #555;
 }
 
@@ -47,13 +48,16 @@ input:focus {
 }
 
 #calculateButton:hover, #defaultButton:hover, #readSaveButton:hover {
-	background-color: #506080;
+	//background-color: #506080;
+	background-color: #7b7;
 	color: #eee;
 }
 
 #calculateButton:active, #defaultButton:active, #readSaveButton:active {
-	border-color: #405070;
-	background-color: #405070;
+	//border-color: #405070;
+	border-color: #363;
+	//background-color: #405070;
+	background-color: #363;
 	color: #eee;
 }
 
