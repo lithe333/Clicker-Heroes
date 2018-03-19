@@ -39,13 +39,16 @@ input:focus {
 }
 
 #calculateButton:hover, #defaultButton:hover, #readSaveButton:hover {
-	background-color: #7080a0;
+	//background-color: #7080a0;
+	background-color: #7b7;
 	color: white;
 }
 
 #calculateButton:active, #defaultButton:active, #readSaveButton:active {
-	border-color: #405070;
-	background-color: #405070;
+	//border-color: #405070;
+	border-color: #363;
+	//background-color: #405070;
+	background-color: #363;
 	color: white;
 }
 
