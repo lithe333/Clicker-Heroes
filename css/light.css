@@ -1,0 +1,66 @@
+//background
+body {
+    background-color: #bfb;	//cf1
+}
+
+//links
+a {
+    color: #b6b;	//cs1
+}
+
+//boxes
+.boxes > div > div {
+	border-color: #6f6;	//cf2
+    	background-color: #9b9;	//cf3
+}
+
+//headings
+.title {
+	background-color: #3b3;	//cs2
+	color: #bfb;	//cs3
+}
+
+//text
+.content {
+	color: #030;	//cr1
+}
+
+//textareas
+input {
+	background-color: #696;	//cs4
+	transition: background-color 0.3s;
+}
+input:hover {
+	background-color: #3b3;	//cs2
+}
+input:focus {
+	background-color: #0f0;	//cs5
+}
+
+//buttons
+#calculateButton, #defaultButton {
+	background-color: #9b9;	//cf3
+	border-color: #6f6;	//cf2
+	transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+	color: #030;	//cr1
+}
+#calculateButton:hover, #defaultButton:hover {
+	background-color: #3b3;	//cs2
+	color: #0f0;	//cs5
+}
+#calculateButton:active, #defaultButton:active {
+	border-color: #3b3;	//cs2
+	background-color: #0f0;	//cs5
+	color: #b6b;	//cs1
+}
+
+//extend
+#showAdvanced {
+	background-color: #9b9;	//cf3
+	color: #030;	//cr1
+}
+
+//horizontal
+hr {
+	background: #030;	//cr1
+}
