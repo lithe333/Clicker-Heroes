@@ -469,8 +469,8 @@ $("#ancient_souls").keyup(function(ev) {
 
 function changeTheme() {
     $("#theme").attr("href", $("#dark").is(":checked")
-        ? "css/dark-theme-v001.css"
-        : "css/light-theme-v001.css"
+        ? "css/dark.css"
+        : "css/light.css"
     );
 }
 
