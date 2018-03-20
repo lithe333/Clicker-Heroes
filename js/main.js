@@ -200,6 +200,23 @@ function getInputs() {
     return [Math.floor(ancientSouls), zoneOverride];
 }
 
+//<link id="theme" rel="stylesheet" href="css/light.css">
+
+function radeo() {
+    $("#beta").is(":checked").attr("checkbox", $("#reserveAS").is(":checked")
+        ? false
+        : true
+    );
+}    
+
+function rodio() {
+    $("#reserveAS").is(":checked").attr("checkbox", $("#beta").is(":checked")
+        ? false
+        : true
+    );
+}              
+                 
+
 function refresh(test=false, ancientSouls=0, useBeta=false) {
     //Inputs
     this.useBeta = test ? useBeta : $("#beta").is(":checked");
