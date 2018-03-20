@@ -204,15 +204,15 @@ function getInputs() {
 
 function radeo() {
     $("#beta").is(":checked").attr("checkbox", $("#reserveAS").is(":checked")
-        ? false
-        : true
+        ? "false"
+        : "true"
     );
 }    
 
 function rodio() {
     $("#reserveAS").is(":checked").attr("checkbox", $("#beta").is(":checked")
-        ? false
-        : true
+        ? "false"
+        : "true"
     );
 }              
                  
