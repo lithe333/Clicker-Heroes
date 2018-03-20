@@ -31,10 +31,10 @@
 								<input value="0" id="ancient_souls" type="text">
 							</div>
 							<div id="TP">TP: 2.0000%</div>
-							<radiogroup>
-								<br><input type="radio" id="reserveAS" class="checkbox" onclick="refresh()"> Radio 1
-								<br><input type="radio" id="beta" class="checkbox" checked onclick="refresh()"> Radio 2
-                            				</radiogroup>
+							<form">
+								<br><input type="radio" name="build" id="reserveAS" class="checkbox" onclick="refresh()"> Radio 1
+								<br><input type="radio" name="build" id="beta" class="checkbox" checked onclick="refresh()"> Radio 2
+                            				</form>
 							<br><input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()"> Darker Theme
 							<br><button id="calculateButton" onclick="refresh()">Calculate</button>
 							<hr>
