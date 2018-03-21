@@ -57,6 +57,12 @@ function showAdvancedClick() {
     });
 }
 
+function showDriejClick() {
+    $("#driejSettings").toggle(100, function(){
+        $("#showDriej").html( (settingsVisible = !settingsVisible) ? "Hide Dreij's Stats" : "Show Dreij's Stats");
+    });
+}
+
 function setDefaults() {
     $("#zoneOverride").val(0);
 }
