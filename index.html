@@ -31,10 +31,11 @@
 								<input value="0" id="ancient_souls" type="text">
 							</div>
 							<div id="TP">TP: 2.0000%</div>
+							<hr>
 							<form>
-								<input type="radio" name="build" id="idleBuild" class="checkbox" checked onclick="refresh()"> Idle Build
+								<input type="radio" name="build" id="idleBuild" class="checkbox" onclick="refresh()"> Idle Build
 								<br><input type="radio" name="build" id="hybridBuild" class="checkbox" onclick="refresh()"> Hybrid Build
-								<br><input type="radio" name="build" id="activeBuild" class="checkbox" onclick="refresh()"> Active Build
+								<br><input type="radio" name="build" id="activeBuild" class="checkbox" checked onclick="refresh()"> Active Build
 								<br><input type="radio" name="build" id="customBuild" class="checkbox" onclick="refresh()"> Custom Build (adjust below)
                             				</form>
 							<br><button id="calculateButton" onclick="refresh()">Calculate</button>
@@ -102,8 +103,8 @@
 								<hr>
 							</div>
 							<form>
-								<input type="radio" name="zone" id="startingZone" class="checkbox" checked onclick="refresh()"> Starting Zone
-								<br><input type="radio" name="zone" id="highestZone" class="checkbox" onclick="refresh()"> Highest Zone (estimate)
+								<input type="radio" name="zone" id="startingZone" class="checkbox" onclick="refresh()"> Starting Zone
+								<br><input type="radio" name="zone" id="highestZone" class="checkbox" checked onclick="refresh()"> Highest Zone (estimate)
 								<br><input type="radio" name="zone" id="customZone" class="checkbox" onclick="refresh()"> Custom Zone (adjust below)
                             				</form>
 							<div class="numberInput">
