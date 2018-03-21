@@ -340,12 +340,6 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
     let xyliqilLevel = 0;
     this.remainingAncientSouls -= this.getCostFromLevel(xyliqilLevel);
 
-    // Remove souls if using Reserve AS
-    if (!test && this.reserve) {
-        var unspentAncientSouls = Math.floor( this.remainingAncientSouls*0.1 )
-        this.remainingAncientSouls -= unspentAncientSouls;
-    }
-
     // Super outsiders
     let rhageistLevel = this.getCostFromLevel(rhageistCap) > (this.remainingAncientSouls * rhageistRatio)
         ? this.spendAS(rhageistRatio, this.remainingAncientSouls)
@@ -382,21 +376,6 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
     this.newAncientSouls = Math.max(ancientSouls, Math.floor(newLogHeroSouls * 5));
     this.ancientSoulsDiff = this.newAncientSouls - ancientSouls;
     this.newTranscendentPower = (25 - 23 * Math.exp(-0.0003 * this.newAncientSouls)) / 100;
-
-    //test log
-    var unspent = this.remainingAncientSouls + (unspentAncientSouls||0);
-    if (test) {
-        return (JSON.stringify({
-            ancientSouls: ancientSouls,
-            useBeta: this.useBeta,
-            expectedLevels: [xyliqilLevel,chorLevel,phanLevel,ponyLevel,borbLevel,rhageistLevel,kariquaLevel,orphalasLevel,senakhanLevel],
-            expectedRemaining: unspent,
-            newHze: this.newHze,
-            newLogHeroSouls: newLogHeroSouls,
-            newAncientSouls: this.newAncientSouls,
-            newTranscendentPower: this.newTranscendentPower*100
-        }));
-    }
 
     // Display the results
     $("#TP").html("TP: " + (transcendentPower*100).toFixed(4) + "%" );
@@ -451,6 +430,7 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
         "<tr><td>Orphalas</td><td>"+orphalasLevel.toLocaleString()+"</td><td>"+getCostFromLevel(orphalasLevel).toLocaleString()+"</td><td>"+
         "<tr><td>Sen-Akhan</td><td>"+senakhanLevel.toLocaleString()+"</td><td>"+getCostFromLevel(senakhanLevel).toLocaleString()+"</td><td>"
     );
+    /*
     $("#share").html(
         xyliqilLevel+'/'+
         chorLevel+'/'+
@@ -463,6 +443,7 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
         senakhanLevel
     );
     $("#unspentAS").html( "Unspent: " + unspent );
+    */
 }
 
 function test() {
