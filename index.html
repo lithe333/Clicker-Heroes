@@ -32,22 +32,40 @@
 							</div>
 							<div id="TP">TP: 2.0000%</div>
 							<form>
-								<p><h3>Builds</h3></p>
+								<h3>Builds</h3>
 								<input type="radio" name="build" id="idleBuild" class="checkbox" checked onclick="refresh()"> Idle
 								<br><input type="radio" name="build" id="hybridBuild" class="checkbox" onclick="refresh()"> Hybrid
 								<br><input type="radio" name="build" id="activeBuild" class="checkbox" onclick="refresh()"> Active
 								<br><input type="radio" name="build" id="customBuild" class="checkbox" onclick="refresh()"> Custom - adjust below
                             				</form>
 							<br><button id="calculateButton" onclick="refresh()">Calculate</button>
-							<hr><input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()"> Darker Theme
+							<hr>
+							<input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()"> Darker Theme
 						</div>
 					</div>
 				</div>
-				<div class="box-8">
+				<div class="box-4">
 					<div>
-						<div class="title">Outsider Recommendations</div>
+						<div class="title">Ancients</div>
 						<div class="content">
-							<table id="OutsidersTable" cellspacing="0">
+							<table id="ancientsTable" cellspacing="0">
+								<thead><tr>
+									<th>Ancient(s)</th>
+									<th>Level</th>
+									<th>Total Cost</th>
+								</tr></thead>
+								<tbody>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="box-4">
+					<div>
+						<div class="title">Outsiders</div>
+						<div class="content">
+							<table id="outsidersTable" cellspacing="0">
 								<thead><tr>
 									<th>Outsider</th>
 									<th>Level</th>
@@ -57,8 +75,6 @@
 									
 								</tbody>
 							</table>
-							<div id="share"></div>
-							<div id="unspentAS">Unspent: 0</div>
 						</div>
 					</div>
 				</div>
@@ -67,8 +83,25 @@
 			<button id="showCustom" onclick="showCustomClick()">Custom Build Settings</button>
 			<div id="customSettings">
 				<div class="numberInput">
-					<p>Zone override:</p>
-					<input id="zoneOverride" type="text" style="font-size:12px;">
+					<h3>Build Resource Distribution Ratios (0-100):</h3>
+					<br><p>Idle DPS</p>
+					<input id="inputIdleDPS" type="text" style="font-size:12px;">
+					<br><p>Hybrid DPS</p>
+					<input id="inputHybridDPS" type="text" style="font-size:12px;">
+					<br><p>Active DPS</p>
+					<input id="inputActiveDPS" type="text" style="font-size:12px;">
+					<br><p>Idle Gold</p>
+					<input id="inputIdleGold" type="text" style="font-size:12px;">
+					<br><p>Hybrid Gold</p>
+					<input id="inputHybridGold" type="text" style="font-size:12px;">
+					<br><p>Active Gold</p>
+					<input id="inputActiveGold" type="text" style="font-size:12px;">
+					<br><p>Skills</p>
+					<input id="inputSkills" type="text" style="font-size:12px;">
+					<br><p>Progression</p>
+					<input id="inputProgression" type="text" style="font-size:12px;">
+					<br><p>Rubies</p>
+					<input id="inputRubies" type="text" style="font-size:12px;">
 				</div>
 			</div>
 			<hr>
