@@ -32,11 +32,10 @@
 							</div>
 							<div id="TP">TP: 2.0000%</div>
 							<form>
-								<h3>Builds</h3>
-								<input type="radio" name="build" id="idleBuild" class="checkbox" checked onclick="refresh()"> Idle
-								<br><input type="radio" name="build" id="hybridBuild" class="checkbox" onclick="refresh()"> Hybrid
-								<br><input type="radio" name="build" id="activeBuild" class="checkbox" onclick="refresh()"> Active
-								<br><input type="radio" name="build" id="customBuild" class="checkbox" onclick="refresh()"> Custom - adjust below
+								<input type="radio" name="build" id="idleBuild" class="checkbox" checked onclick="refresh()"> Idle Build
+								<br><input type="radio" name="build" id="hybridBuild" class="checkbox" onclick="refresh()"> Hybrid Build
+								<br><input type="radio" name="build" id="activeBuild" class="checkbox" onclick="refresh()"> Active Build
+								<br><input type="radio" name="build" id="customBuild" class="checkbox" onclick="refresh()"> Custom Build (adjust below)
                             				</form>
 							<br><button id="calculateButton" onclick="refresh()">Calculate</button>
 							<hr>
@@ -100,6 +99,16 @@
 								<hr>
 								<p>Rubies</p>
 								<input value="100" id="inputRubies" type="text" style="font-size:12px;"> %
+								<hr>
+							</div>
+							<form>
+								<input type="radio" name="zone" id="startingZone" class="checkbox" checked onclick="refresh()"> Starting Zone
+								<br><input type="radio" name="zone" id="highestZone" class="checkbox" onclick="refresh()"> Highest Zone (estimate)
+								<br><input type="radio" name="zone" id="customZone" class="checkbox" onclick="refresh()"> Custom Zone (adjust below)
+                            				</form>
+							<div class="numberInput">
+								<p>Zone override:</p>
+								<input id="zoneOverride" type="text" style="font-size:12px;">
 							</div>
 						</div>
 					</div>
@@ -133,11 +142,6 @@
 							<div class="title">Driej's Stuff</div>
 							<div class="content">
 								<p><b>For Driej's original outsider calculator -> <a href="https://driej.github.io/Clicker-Heroes-Outsiders/">https://driej.github.io/Clicker-Heroes-Outsiders/</a></b></p>
-								<div class="numberInput">
-									<p>Zone override:</p>
-									<input id="zoneOverride" type="text" style="font-size:12px;">
-								</div>
-								<button id="defaultButton" onclick="defaultClick()">Set to Default</button>
 							</div>
 						</div>
 					</div>
