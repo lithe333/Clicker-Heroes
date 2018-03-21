@@ -55,7 +55,7 @@ input:focus {
 }
 
 /*extend*/
-#showAdvanced {
+#showAdvanced, showDreij {
 	background-color: #9b9;	/*cf3*/
 	color: #030;	/*cr1*/
 }
