@@ -32,20 +32,14 @@
 							</div>
 							<div id="TP">TP: 2.0000%</div>
 							<form>
-								<br><input type="radio" name="build" id="reserveAS" class="checkbox" onclick="refresh()"> Radio 1
-								<br><input type="radio" name="build" id="beta" class="checkbox" checked onclick="refresh()"> Radio 2
+								<p><h2>Builds</h2></p>
+								<br><input type="radio" name="build" id="idleBuild" class="checkbox" checked onclick="refresh()"> Idle
+								<br><input type="radio" name="build" id="hybridBuild" class="checkbox" onclick="refresh()"> Hybrid
+								<br><input type="radio" name="build" id="activeBuild" class="checkbox" onclick="refresh()"> Active
+								<br><input type="radio" name="build" id="customBuild" class="checkbox" onclick="refresh()"> Custom
                             				</form>
-							<br><input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()"> Darker Theme
 							<br><button id="calculateButton" onclick="refresh()">Calculate</button>
-							<hr>
-							<button id="showAdvanced" onclick="showAdvancedClick()">Show Advanced Settings</button>
-							<div id="advancedSettings">
-								<div class="numberInput">
-									<p>Zone override:</p>
-									<input id="zoneOverride" type="text" style="font-size:12px;">
-								</div>
-								<button id="defaultButton" onclick="defaultClick()">Set to Default</button>
-							</div>
+							<br><input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()"> Darker Theme
 						</div>
 					</div>
 				</div>
@@ -69,7 +63,16 @@
 					</div>
 				</div>
 			</div>
-			<br>
+			<hr>
+			<button id="showCustom" onclick="showCustomClick()">Custom Build Settings</button>
+				<div id="customSettings">
+					<div class="numberInput">
+						<p>Zone override:</p>
+						<input id="zoneOverride" type="text" style="font-size:12px;">
+					</div>
+					<button id="defaultButton" onclick="defaultClick()">Set to Default</button>
+				</div>
+			<hr>
 			<button id="showDriej" onclick="showDriejClick()">Show Driej's Stats</button>
 			<div id="driejSettings">
 				<div class="boxes">
