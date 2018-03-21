@@ -21,7 +21,7 @@ a {
 }
 
 /*text*/
-.content {
+.content, #customSettings {
 	color: #030;	/*cr1*/
 }
 
