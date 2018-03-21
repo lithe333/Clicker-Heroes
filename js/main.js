@@ -61,7 +61,7 @@ function showAdvancedClick() {
 var settingsCustomVisible = false;
 function showCustomClick() {
     $("#customSettings").toggle(100, function(){
-        $("#showCustom").html( (settingsCustomVisible = !settingsCustomVisible) ? "Custom Build Settings" : "Hide Custom Settings");
+        $("#showCustom").html( (settingsCustomVisible = !settingsCustomVisible) ? "Hide Custom Settings" : "Custom Build Settings");
     });
 }
 
