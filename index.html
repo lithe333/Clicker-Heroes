@@ -32,7 +32,7 @@
 							</div>
 							<div id="TP">TP: 2.0000%</div>
 							<form>
-								<br><input type="radio" name="build" id="reserveAS" class="checkbox" onclick="refresh()"> Radio 11
+								<br><input type="radio" name="build" id="reserveAS" class="checkbox" onclick="refresh()"> Radio 1
 								<br><input type="radio" name="build" id="beta" class="checkbox" checked onclick="refresh()"> Radio 2
                             				</form>
 							<br><input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()"> Darker Theme
@@ -69,66 +69,69 @@
 					</div>
 				</div>
 			</div>
-			<div class="boxes">
-				<div class="box-4">
-					<div>
-						<div class="title">End of Transcension Estimates</div>
-						<div class="content">
-							<div id="predictedHZE"></div>
-							<div id="predictedHS"></div>
-							<div id="predictedAS"></div>
-							<div id="predictedTP"></div>
-							<br>
-							<div id="predictedAncients"></div>
-							<div id="kuma"></div>
-							<div id="atman"></div>
-							<div id="bubos"></div>
-							<div id="chronos"></div>
-							<div id="dora"></div>
+			<button id="showDriej" onclick="showDriejClick()">Show Dreij's Stats</button>				
+			<div id="driejSettings">
+				<div class="boxes">
+					<div class="box-4">
+						<div>
+							<div class="title">End of Transcension Estimates</div>
+							<div class="content">
+								<div id="predictedHZE"></div>
+								<div id="predictedHS"></div>
+								<div id="predictedAS"></div>
+								<div id="predictedTP"></div>
+								<br>
+								<div id="predictedAncients"></div>
+								<div id="kuma"></div>
+								<div id="atman"></div>
+								<div id="bubos"></div>
+								<div id="chronos"></div>
+								<div id="dora"></div>
 							
+							</div>
+						</div>
+					</div>
+					<div class="box-4">
+						<div>
+							<div class="title">Unbuffed stats at HZE</div>
+							<div class="content">
+								<div id="unbuffedMPZ"></div>
+								<div id="unbuffedTCC"></div>
+								<div id="unbuffedBossHP"></div>
+								<div id="unbuffedTimer"></div>
+								<div id="unbuffedPBC"></div>
+							</div>
+						</div>
+					</div>
+					<div class="box-4">
+						<div>
+							<div class="title">Buffed stats at HZE</div>
+							<div class="content">
+								<div id="buffedMPZ"></div>
+								<div id="buffedTCC"></div>
+								<div id="buffedBossHP"></div>
+								<div id="buffedTimer"></div>
+								<div id="buffedPBC"></div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="box-4">
-					<div>
-						<div class="title">Unbuffed stats at HZE</div>
-						<div class="content">
-							<div id="unbuffedMPZ"></div>
-							<div id="unbuffedTCC"></div>
-							<div id="unbuffedBossHP"></div>
-							<div id="unbuffedTimer"></div>
-							<div id="unbuffedPBC"></div>
+				<div class="boxes">
+					<div class="box-12">
+						<div>
+							<div class="title">Zone Breakpoints</div>
+							<div class="content">
+								<div id="HighMpz"></div>
+								<div id="5PBC"></div>
+								<div id="90BHP"></div>
+								<div id="2sTimer"></div>
+								<div id="99TTC"></div>
+								<div id="1TTC"></div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="box-4">
-					<div>
-						<div class="title">Buffed stats at HZE</div>
-						<div class="content">
-							<div id="buffedMPZ"></div>
-							<div id="buffedTCC"></div>
-							<div id="buffedBossHP"></div>
-							<div id="buffedTimer"></div>
-							<div id="buffedPBC"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="boxes">
-				<div class="box-12">
-					<div>
-						<div class="title">Zone Breakpoints</div>
-						<div class="content">
-							<div id="HighMpz"></div>
-							<div id="5PBC"></div>
-							<div id="90BHP"></div>
-							<div id="2sTimer"></div>
-							<div id="99TTC"></div>
-							<div id="1TTC"></div>
-						</div>
-					</div>
-				</div>
-			</div>
+			</div>	
 		</div>
 		<script src="js/main.js"></script>
 	</body>
