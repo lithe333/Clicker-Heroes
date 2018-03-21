@@ -432,21 +432,21 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
     );
     //Ancients Table
     $("#ancientsTable tbody").html(
-        "<tr><td>Idle DPS - Siyalatas</td><td>"+xyliqilLevel.toLocaleString()+"</td><td>"+getCostFromLevel(xyliqilLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Hybrid DPS - Argaiv</td><td>"+chorLevel.toLocaleString()+"</td><td>"+getCostFromLevel(chorLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Hybrid DPS - Morgulis</td><td>"+chorLevel.toLocaleString()+"</td><td>"+getCostFromLevel(chorLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Active DPS - Bhaal, Fragsworth</td><td>"+phanLevel.toLocaleString()+"</td><td>"+phanLevel.toLocaleString()+"</td><td>"+
-        "<tr><td>Active DPS - Juggernaut</td><td>"+phanLevel.toLocaleString()+"</td><td>"+phanLevel.toLocaleString()+"</td><td>"+
-        "<tr><td>Idle Gold - Libertas</td><td>"+ponyLevel.toLocaleString()+"</td><td>"+getCostFromLevel(ponyLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Idle Gold - Nogardnit</td><td>"+ponyLevel.toLocaleString()+"</td><td>"+getCostFromLevel(ponyLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Hybrid Gold - Dogcog, Dora, Fortuna</td><td>"+borbLevel.toLocaleString()+"</td><td>"+getCostFromLevel(borbLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Hybrid Gold - Mammon, Mimzee</td><td>"+borbLevel.toLocaleString()+"</td><td>"+getCostFromLevel(borbLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Active Gold - Pluto</td><td>"+rhageistLevel.toLocaleString()+"</td><td>"+getCostFromLevel(rhageistLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Hero Souls - Atman</td><td>"+rhageistLevel.toLocaleString()+"</td><td>"+getCostFromLevel(rhageistLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Skills - Berserker, Chawedo, Energon, Hecatoncheir, Kleptos, Sniperino</td><td>"+kariquaLevel.toLocaleString()+"</td><td>"+getCostFromLevel(kariquaLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Skills - Vaagur</td><td>"+kariquaLevel.toLocaleString()+"</td><td>"+getCostFromLevel(kariquaLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Progression - Bubos, Kumawakamaru, Chronos</td><td>"+orphalasLevel.toLocaleString()+"</td><td>"+getCostFromLevel(orphalasLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Rubies - Revolc</td><td>"+senakhanLevel.toLocaleString()+"</td><td>"+getCostFromLevel(senakhanLevel).toLocaleString()+"</td><td>"
+        "<tr><td>Idle DPS</td><td>Siyalatas</td><td>"+xyliqilLevel.toLocaleString()+"</td><td>"+getCostFromLevel(xyliqilLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Hybrid DPS</td><td>Argaiv</td><td>"+chorLevel.toLocaleString()+"</td><td>"+getCostFromLevel(chorLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Hybrid DPS</td><td>Morgulis</td><td>"+chorLevel.toLocaleString()+"</td><td>"+getCostFromLevel(chorLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Active DPS</td><td>Bhaal, Fragsworth</td><td>"+phanLevel.toLocaleString()+"</td><td>"+phanLevel.toLocaleString()+"</td><td>"+
+        "<tr><td>Active DPS</td><td>Juggernaut</td><td>"+phanLevel.toLocaleString()+"</td><td>"+phanLevel.toLocaleString()+"</td><td>"+
+        "<tr><td>Idle Gold</td><td>Libertas</td><td>"+ponyLevel.toLocaleString()+"</td><td>"+getCostFromLevel(ponyLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Idle Gold</td><td>Nogardnit</td><td>"+ponyLevel.toLocaleString()+"</td><td>"+getCostFromLevel(ponyLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Hybrid Gold</td><td>Dogcog, Dora, Fortuna</td><td>"+borbLevel.toLocaleString()+"</td><td>"+getCostFromLevel(borbLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Hybrid Gold</td><td>Mammon, Mimzee</td><td>"+borbLevel.toLocaleString()+"</td><td>"+getCostFromLevel(borbLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Active Gold</td><td>Pluto</td><td>"+rhageistLevel.toLocaleString()+"</td><td>"+getCostFromLevel(rhageistLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Hero Souls</td><td>Atman</td><td>"+rhageistLevel.toLocaleString()+"</td><td>"+getCostFromLevel(rhageistLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Skills</td><td>Berserker, Chawedo, Energon, Hecatoncheir, Kleptos, Sniperino</td><td>"+kariquaLevel.toLocaleString()+"</td><td>"+getCostFromLevel(kariquaLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Skills</td><td>Vaagur</td><td>"+kariquaLevel.toLocaleString()+"</td><td>"+getCostFromLevel(kariquaLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Progression</td><td>Bubos, Kumawakamaru, Chronos</td><td>"+orphalasLevel.toLocaleString()+"</td><td>"+getCostFromLevel(orphalasLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Rubies</td><td>Revolc</td><td>"+senakhanLevel.toLocaleString()+"</td><td>"+getCostFromLevel(senakhanLevel).toLocaleString()+"</td><td>"
     );
     /*
     $("#share").html(
