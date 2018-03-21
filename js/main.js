@@ -431,7 +431,7 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
         "<tr><td>Sen-Akhan</td><td>"+senakhanLevel.toLocaleString()+"</td><td>"+getCostFromLevel(senakhanLevel).toLocaleString()+"</td><td>"
     );
     //Ancients Table
-    $("#ancientssTable tbody").html(
+    $("#ancientsTable tbody").html(
         "<tr><td>Idle DPS - Siyalatas</td><td>"+xyliqilLevel.toLocaleString()+"</td><td>"+getCostFromLevel(xyliqilLevel).toLocaleString()+"</td><td>"+
         "<tr><td>Hybrid DPS - Argaiv</td><td>"+chorLevel.toLocaleString()+"</td><td>"+getCostFromLevel(chorLevel).toLocaleString()+"</td><td>"+
         "<tr><td>Hybrid DPS - Morgulis</td><td>"+chorLevel.toLocaleString()+"</td><td>"+getCostFromLevel(chorLevel).toLocaleString()+"</td><td>"+
