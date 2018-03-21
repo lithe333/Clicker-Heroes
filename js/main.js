@@ -65,6 +65,13 @@ function showCustomClick() {
     });
 }
 
+var settingsAncientsVisible = false;
+function showAncientsClick() {
+    $("#ancientsBuild").toggle(100, function(){
+        $("#showAncients").html( (settingsAncientsVisible = !settingsAncientsVisible) ? "Hide Ancients Build" : "Show Ancients Build");
+    });
+}
+
 var settingsDriejVisible = false;
 function showDriejClick() {
     $("#driejSettings").toggle(100, function(){
