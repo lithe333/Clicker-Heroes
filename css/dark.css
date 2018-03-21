@@ -38,24 +38,24 @@ input:focus {
 }
 
 /*buttons*/
-#calculateButton, #defaultButton {
+#calculateButton, #defaultButton, #showDriej {
 	background-color: #363;	/*cf3*/
 	border-color: #090;	/*cf2*/
 	transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 	color: #bfb;	/*cr1*/
 }
-#calculateButton:hover, #defaultButton:hover {
+#calculateButton:hover, #defaultButton:hover, #showDriej:hover {
 	background-color: #3b3;	/*cs2*/
 	color: #0f0;	/*cs5*/
 }
-#calculateButton:active, #defaultButton:active {
+#calculateButton:active, #defaultButton:active, #showDriej:active {
 	border-color: #3b3;	/*cs2*/
 	background-color: #0f0;	/*cs5*/
 	color: #b6b;	/*cs1*/
 }
 
 /*extend*/
-#showAdvanced, #showDriej {
+#showAdvanced {
 	background-color: #363;	/*cf3*/
 	color: #bfb;	/*cr1*/
 }
