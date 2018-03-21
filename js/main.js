@@ -60,7 +60,7 @@ function showAdvancedClick() {
 
 function showDriejClick() {
     $("#driejSettings").toggle(100, function(){
-        $("#showDriej").html( (settingsDriejVisible = !settingsDriejVisible) ? "Hide Dreij's Stats" : "Show Dreij's Stats");
+        $("#showDriej").html( (settingsDriejVisible = !settingsDriejVisible) ? "Hide Driej's Stats" : "Show Driej's Stats");
     });
 }
 
