@@ -49,17 +49,18 @@ Math.log10 = function (x) { return Math.log(x) / Math.LN10; };
     }
 })();
 
-var settingsVisible = false;
+var settingsAdvancedVisible = false;
+var settingsDreijVisible = false;
 
 function showAdvancedClick() {
     $("#advancedSettings").toggle(100, function(){
-        $("#showAdvanced").html( (settingsVisible = !settingsVisible) ? "Hide Advanced Settings" : "Show Advanced Settings");
+        $("#showAdvanced").html( (settingsAdvancedVisible = !settingsAdvancedVisible) ? "Hide Advanced Settings" : "Show Advanced Settings");
     });
 }
 
 function showDriejClick() {
     $("#driejSettings").toggle(100, function(){
-        $("#showDriej").html( (settingsVisible = !settingsVisible) ? "Hide Dreij's Stats" : "Show Dreij's Stats");
+        $("#showDriej").html( (settingsDreijVisible = !settingsDreijVisible) ? "Hide Dreij's Stats" : "Show Dreij's Stats");
     });
 }
 
