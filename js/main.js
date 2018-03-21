@@ -50,7 +50,7 @@ Math.log10 = function (x) { return Math.log(x) / Math.LN10; };
 })();
 
 var settingsAdvancedVisible = false;
-var settingsDreijVisible = false;
+var settingsDriejVisible = false;
 
 function showAdvancedClick() {
     $("#advancedSettings").toggle(100, function(){
@@ -60,7 +60,7 @@ function showAdvancedClick() {
 
 function showDriejClick() {
     $("#driejSettings").toggle(100, function(){
-        $("#showDriej").html( (settingsDreijVisible = !settingsDreijVisible) ? "Hide Dreij's Stats" : "Show Dreij's Stats");
+        $("#showDriej").html( (settingsDriejVisible = !settingsDriejVisible) ? "Hide Dreij's Stats" : "Show Dreij's Stats");
     });
 }
 
