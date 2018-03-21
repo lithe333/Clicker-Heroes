@@ -88,12 +88,12 @@ input {
 	margin-top: 4px;
 }
 
-#showAdvanced, showDreij {
+#showAdvanced, #showDriej {
 	border: none;
 	width: 100%;
 }
 
-#advancedSettings, driejSettings {
+#advancedSettings, #driejSettings {
 	margin-top: 10px;
 	display: none;
 }
