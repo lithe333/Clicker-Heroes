@@ -21,7 +21,7 @@ a {
 }
 
 /*text*/
-.content, #customSettings {
+.content {
 	color: #030;	/*cr1*/
 }
 
@@ -38,17 +38,17 @@ input:focus {
 }
 
 /*buttons*/
-#calculateButton, #defaultButton, #showDriej, #showCustom {
+#calculateButton, #defaultButton, #showDriej, #showCustom, #showAncients {
 	background-color: #9b9;	/*cf3*/
 	border-color: #6f6;	/*cf2*/
 	transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 	color: #030;	/*cr1*/
 }
-#calculateButton:hover, #defaultButton:hover, #showDriej:hover, #showCustom:hover {
+#calculateButton:hover, #defaultButton:hover, #showDriej:hover, #showCustom:hover, #showAncients:hover {
 	background-color: #3b3;	/*cs2*/
 	color: #0f0;	/*cs5*/
 }
-#calculateButton:active, #defaultButton:active, #showDriej:active, #showCustom:active {
+#calculateButton:active, #defaultButton:active, #showDriej:active, #showCustom:active, #showAncients:active {
 	border-color: #3b3;	/*cs2*/
 	background-color: #0f0;	/*cs5*/
 	color: #b6b;	/*cs1*/
