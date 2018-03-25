@@ -35,15 +35,15 @@
 								<br><input value="0" id="autoClikers" type="text"> #+1 Auto Clicker(s)
 							</div>
 							<hr>
-							<div class="numberInput">
-								<p>Zone override:</p>
-								<input value="0" id="zoneOverride" type="text">
-							</div>
 							<form>
 								<input type="radio" name="zone" id="startingZone" class="checkbox" onclick="refresh()"> Starting Zone
 								<br><input type="radio" name="zone" id="highestZone" class="checkbox" checked onclick="refresh()"> Highest Zone (estimate)
 								<br><input type="radio" name="zone" id="customZone" class="checkbox" onclick="refresh()"> Custom Zone (adjust below)
 							</form>
+							<div class="numberInput">
+								<p>Zone override:</p>
+								<input value="0" id="zoneOverride" type="text">
+							</div>
 							<hr>
 							<form>
 								<input type="radio" name="build" id="idleBuild" class="checkbox" onclick="refresh()"> Idle Build
