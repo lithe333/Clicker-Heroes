@@ -504,7 +504,7 @@ function test() {
     console.log(readout);
 }
 
-$("#ancient_souls").keyup(function(ev) {
+$("#ancientsSouls").keyup(function(ev) {
     if (ev.which === 13) refresh();
 });
 
