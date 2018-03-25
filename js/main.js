@@ -65,10 +65,10 @@ function showCustomClick() {
     });
 }
 
-var settingsOutsidersVisible = false;
+var settingsOutsidersVisible = true;
 function showOutsiderClick() {
     $("#outsiderLevels").toggle(100, function(){
-        $("#showOutsider").html( (settingsOutsidersVisible = !settingsOutsidersVisible) ? "Hide Outsider Levels" : "Set Outsider Levels");
+        $("#showOutsider").html( (settingsOutsidersVisible = !settingsOutsidersVisible) ? "Set Outsider Levels" : "Hide Outsider Levels");
     });
 }
 
