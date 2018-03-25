@@ -212,7 +212,7 @@ function findStrategy(ancientSouls) {
 }
 
 function getInputs() {
-    var ancientSouls = parseFloat( $("#ancient_souls").val() || 0 );
+    var ancientSouls = parseFloat( $("#ancientsSouls").val() || 0 );
     if( !(ancientSouls>=0) ) {
         alert("Calculation failed. Ancient Souls must be a non-negative number.");
         return -1;
