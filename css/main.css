@@ -79,7 +79,7 @@ input {
 	margin: 4px 6px 8px 0;
 }
 
-#calculateButton, #defaultButton, #showDriej, #showCustom, #showAncients {
+#calculateButton, #defaultButton, #showDriej, #showCustom, #showOutsider, #showAncients {
 	border-style: solid;
 	border-width: 2px;
 	border-radius: 4px;
