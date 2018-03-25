@@ -33,6 +33,9 @@
 
 @media (max-width: 630px) {
 
+	.box-3 {
+		width: 50%;
+	}
 	.box-4, .box-6, .box-8, .box-12 {
 		width: 100%;
 	}
