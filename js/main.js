@@ -9,7 +9,6 @@ Math.log10 = function (x) { return Math.log(x) / Math.LN10; };
     * @param {Number}  value The number.
     * @param {Integer} exp   The exponent (the 10 logarithm of the adjustment base).
     * @returns {Number} The adjusted value.
-    */
     function decimalAdjust(type, value, exp) {
         // If the exp is undefined or zero...
         if (typeof exp === 'undefined' || +exp === 0) {
@@ -65,10 +64,17 @@ function showCustomClick() {
     });
 }
 
+var settingsOutsiderVisible = false;
+function showOutsiderClick() {
+    $("#outsiderLevels").toggle(100, function(){
+        $("#showOutsider").html( (settingsOutsiderVisible = !settingsOutsiderVisible) ? "Hide Outsider Levels" : "Custom Outsider Levels");
+    });
+}
+
 var settingsAncientsVisible = false;
 function showAncientsClick() {
     $("#ancientsBuild").toggle(100, function(){
-        $("#showAncients").html( (settingsAncientsVisible = !settingsAncientsVisible) ? "Hide Ancients Build" : "Show Ancients Build");
+        $("#showAncients").html( (settingsAncientsVisible = !settingsAncientsVisible) ? "Hide Ancient Build" : "Show Ancient Build");
     });
 }
 
