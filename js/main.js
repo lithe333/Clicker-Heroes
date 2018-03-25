@@ -65,7 +65,7 @@ function showCustomClick() {
     });
 }
 
-var settingsOutsiderVisible = false;
+var settingsOutsiderVisible = true;
 function showOutsiderClick() {
     $("#outsiderLevels").toggle(100, function(){
         $("#showOutsider").html( (settingsOutsiderVisible = !settingsOutsiderVisible) ? "Hide Outsider Levels" : "Set Outsider Levels");
