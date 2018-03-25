@@ -100,7 +100,7 @@ input {
 	width: 100%;
 }
 
-#advancedSettings, #driejSettings, #customSettings, #ancientsBuild {
+#advancedSettings, #driejSettings, #customSettings, #outsiderLevels, #ancientsBuild {
 	margin-top: 10px;
 	display: none;
 }
