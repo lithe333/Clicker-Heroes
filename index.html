@@ -22,29 +22,23 @@
 						</div>
 					</div>
 				</div>
-				<div class="box-3">
+				<div class="box-4">
 					<div>
 						<div class="title">Inputs</div>
 						<div class="content">
+							<input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()"> Darker Theme
+							<hr>
 							<div class="numberInput">
-								<input value="0" id="ancientSouls" type="text"> Ancient Souls (set current Outsider levels below)
-								<div id="TP">TP: 2.0000%</div>
 								<input value="0" id="heroSouls" type="text"> Hero Souls
+								<div id="TP">TP: 2.0000%</div>
+								<input value="0" id="ancientSouls" type="text"> Ancient Souls (set current Outsider levels below)
 								<br><input value="0" id="autoClikers" type="text"> #+1 Auto Clicker(s)
 							</div>
+							<hr>
 							<div class="numberInput">
 								<p>Zone override:</p>
 								<input value="0" id="zoneOverride" type="text">
 							</div>
-							<hr>
-							<input type="checkbox" id="dark" class="checkbox" onclick="changeTheme()"> Darker Theme
-						</div>
-					</div>
-				</div>
-				<div class="box-3">
-					<div>
-						<div class="title">Inputs</div>
-						<div class="content">
 							<form>
 								<input type="radio" name="zone" id="startingZone" class="checkbox" onclick="refresh()"> Starting Zone
 								<br><input type="radio" name="zone" id="highestZone" class="checkbox" checked onclick="refresh()"> Highest Zone (estimate)
@@ -61,7 +55,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="box-6">
+				<div class="box-8">
 					<div>
 						<div class="title">Outsider's Build</div>
 						<div class="content">
@@ -82,11 +76,9 @@
 			</div>
 			<hr>
 			<div class="boxes">
-				<div class="box-6">
+				<div class="box-3">
 					<button id="showCustom" onclick="showCustomClick()">Custom Build Settings</button>
-				</div>
-				<div id="customSettings">
-					<div class="box-3">
+					<div id="customSettings">
 						<div class="title">Build Weightings</div>
 						<div class="content">
 							<div class="numberInput">
@@ -123,7 +115,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="box-3">
+				</div>
+				<div class="box-3">
+					<button id="showOutsider" onclick="showOutsiderClick()">Set Outsider Levels</button>
+					<div id="outsiderLevels">
 						<div class="title">Outsiders' Levels</div>
 						<div class="content">
 							<div class="numberInput">
@@ -157,6 +152,7 @@
 							</div>
 						</div>
 					</div>
+				</div>
 				</div>
 				<div class="box-6">
 					<button id="showAncients" onclick="showAncientsClick()">Show Ancient's Build</button>
