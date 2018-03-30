@@ -85,7 +85,7 @@ function showDriejClick() {
         $("#showDriej").html( (settingsDriejVisible = !settingsDriejVisible) ? "Hide Driej's Stats" : "Show Driej's Stats");
     });
 }
-
+/*
 function setDefaults() {
     $("#zoneOverride").val(0);
 }
@@ -93,7 +93,7 @@ function setDefaults() {
 function defaultClick() {
     setDefaults();
 }
-
+*/
 function getCostFromLevel(level) {
     return (level+1)*(level/2);
 }
@@ -221,11 +221,11 @@ function getInputs() {
     var val = $( "#zoneOverride" ).val();
         zoneOverride = ( val=="" ) ? 0 : parseFloat( val );
     if( isNaN(zoneOverride) || zoneOverride<0 ) {
-        setDefaults();
+        /*setDefaults();*/
         zoneOverride = 0;
-        alert("Advanced settings were set to default values.");
+        alert("Please input a positive number. The zone override value has been reset.");
     }
-
+    zoneOverride = Math.floor(zoneOverride);
     return [Math.floor(ancientSouls), zoneOverride];
 }    
                  
@@ -444,6 +444,8 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
         "<tr><td>Orphalas</td><td>"+orphalasLevel.toLocaleString()+"</td><td>"+getCostFromLevel(orphalasLevel).toLocaleString()+"</td><td>"+
         "<tr><td>Sen-Akhan</td><td>"+senakhanLevel.toLocaleString()+"</td><td>"+getCostFromLevel(senakhanLevel).toLocaleString()+"</td><td>"
     );
+    //lithe333 stuffs begins here
+
     //Outsiders Table
     $("#outsidersTable tbody").html(
         "<tr><td>Idle</td><td>Xyliqil</td><td>"+xyliqilLevel.toLocaleString()+"</td><td>"+getCostFromLevel(xyliqilLevel).toLocaleString()+"</td><td>"+
@@ -490,6 +492,10 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
     */
 }
 
+//lithe333 functions
+
+
+/*
 function test() {
     var cases = [0,1,10,100,1000,10000,12500,15000,17500,20000,50000,100000,200000,300000,400000,500000];
         readout = "[\n";
@@ -503,7 +509,7 @@ function test() {
     readout += "\n]";
     console.log(readout);
 }
-
+*/
 $("#ancientsSouls").keyup(function(ev) {
     if (ev.which === 13) refresh();
 });
@@ -514,5 +520,6 @@ function changeTheme() {
         : "css/light.css"
     );
 }
-
+/*
 $(setDefaults)
+*/
