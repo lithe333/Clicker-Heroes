@@ -213,12 +213,12 @@ function findStrategy(ancientSouls) {
 }
 
 function getInputs() {
-    var ancientSouls = parseFloat( $("#ancientsSouls").val() || 0 );
+    var ancientSouls = parseFloat( $("#inputAncientSouls").val() || 0 );
     if( !(ancientSouls>=0) ) {
         alert("Calculation failed. Ancient Souls must be a non-negative number.");
         return -1;
     }
-    var val = $( "#zoneOverride" ).val();
+    var val = $( "#inputZoneOverride" ).val();
         zoneOverride = ( val=="" ) ? 0 : parseFloat( val );
     if( isNaN(zoneOverride) || zoneOverride<0 ) {
         /*setDefaults();*/
@@ -228,7 +228,6 @@ function getInputs() {
     zoneOverride = Math.floor(zoneOverride);
     return [Math.floor(ancientSouls), zoneOverride];
 }    
-                 
 
 function refresh(test=false, ancientSouls=0, useBeta=false) {
     //Inputs
@@ -445,20 +444,26 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
         "<tr><td>Sen-Akhan</td><td>"+senakhanLevel.toLocaleString()+"</td><td>"+getCostFromLevel(senakhanLevel).toLocaleString()+"</td><td>"
     );
     //lithe333 stuffs begins here
-
-    //Outsiders Table
+    var [litheAncientSouls, litheZone, litheZoneOverride, litheBuild, litheCustom, litheIdleDPS, litheHybridDPS, litheActiveDPS, litheIdleGold, litheHybridGold, litheActiveGold, litheHeroSoul, litheSkills, litheProgression, litheRubies, litheXyliqilLevel, litheChorLevel, lithePhanLevel, lithePonyLevel, litheBorbLevel, litheRhageistLevel, litheKariquaLevel, litheOrphalasLevel, litheSenakhanLevel] = getLitheInputs();
+ //var [litheAncientSouls, litheZone, litheZoneOverride,
+//litheBuild, litheCustom, litheIdleDPS, litheHybridDPS, 
+//litheActiveDPS, litheIdleGold, litheHybridGold, 
+//litheActiveGold, litheHeroSoul, litheSkills, litheProgression, 
+//litheRubies
+    
+    //lithe333 Outsiders Table
     $("#outsidersTable tbody").html(
-        "<tr><td>Idle</td><td>Xyliqil</td><td>"+xyliqilLevel.toLocaleString()+"</td><td>"+getCostFromLevel(xyliqilLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Ancient cost</td><td>Chor'gorloth</td><td>"+chorLevel.toLocaleString()+"</td><td>"+getCostFromLevel(chorLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>DPS</td><td>Phandoryss</td><td>"+phanLevel.toLocaleString()+"</td><td>"+phanLevel.toLocaleString()+"</td><td>"+
-        "<tr><td>Primal Hero Souls</td><td>Ponyboy</td><td>"+ponyLevel.toLocaleString()+"</td><td>"+getCostFromLevel(ponyLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Monster Reduction</td><td>Borb</td><td>"+borbLevel.toLocaleString()+"</td><td>"+getCostFromLevel(borbLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Primal Bosses</td><td>Rhageist</td><td>"+rhageistLevel.toLocaleString()+"</td><td>"+getCostFromLevel(rhageistLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Boss Health</td><td>K'Ariqua</td><td>"+kariquaLevel.toLocaleString()+"</td><td>"+getCostFromLevel(kariquaLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Boss Time</td><td>Orphalas</td><td>"+orphalasLevel.toLocaleString()+"</td><td>"+getCostFromLevel(orphalasLevel).toLocaleString()+"</td><td>"+
-        "<tr><td>Treasure Chest</td><td>Sen-Akhan</td><td>"+senakhanLevel.toLocaleString()+"</td><td>"+getCostFromLevel(senakhanLevel).toLocaleString()+"</td><td>"
+        "<tr><td>Idle</td><td>Xyliqil</td><td>"+litheXyliqilLevel.toLocaleString()+"</td><td>"+getCostFromLevel(litheXyliqilLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Ancient cost</td><td>Chor'gorloth</td><td>"+litheChorLevel.toLocaleString()+"</td><td>"+getCostFromLevel(litheChorLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>DPS</td><td>Phandoryss</td><td>"+lithePhanLevel.toLocaleString()+"</td><td>"+lithePhanLevel.toLocaleString()+"</td><td>"+
+        "<tr><td>Primal Hero Souls</td><td>Ponyboy</td><td>"+lithePonyLevel.toLocaleString()+"</td><td>"+getCostFromLevel(lithePonyLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Monster Reduction</td><td>Borb</td><td>"+litheBorbLevel.toLocaleString()+"</td><td>"+getCostFromLevel(litheBorbLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Primal Bosses</td><td>Rhageist</td><td>"+litheRhageistLevel.toLocaleString()+"</td><td>"+getCostFromLevel(litheRhageistLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Boss Health</td><td>K'Ariqua</td><td>"+litheKariquaLevel.toLocaleString()+"</td><td>"+getCostFromLevel(litheKariquaLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Boss Time</td><td>Orphalas</td><td>"+litheOrphalasLevel.toLocaleString()+"</td><td>"+getCostFromLevel(litheOrphalasLevel).toLocaleString()+"</td><td>"+
+        "<tr><td>Treasure Chest</td><td>Sen-Akhan</td><td>"+litheSenakhanLevel.toLocaleString()+"</td><td>"+getCostFromLevel(litheSenakhanLevel).toLocaleString()+"</td><td>"
     );
-    //Ancients Table
+    //lithe333 Ancients Table
     $("#ancientsTable tbody").html(
         "<tr><td>Idle DPS</td><td>Siyalatas</td><td>"+xyliqilLevel.toLocaleString()+"</td><td>"+getCostFromLevel(xyliqilLevel).toLocaleString()+"</td><td>"+
         "<tr><td>Hybrid DPS</td><td>Argaiv</td><td>"+chorLevel.toLocaleString()+"</td><td>"+getCostFromLevel(chorLevel).toLocaleString()+"</td><td>"+
@@ -494,7 +499,172 @@ function refresh(test=false, ancientSouls=0, useBeta=false) {
 
 //lithe333 functions
 
-
+function getLitheInputs() {
+    // ancient souls, hero souls, autoclikers
+    var ancientSouls = parseFloat( $("#inputAncientSouls").val() || 0 );
+    if( !(ancientSouls>=0) ) {
+        alert("Calculation failed. Ancient Souls must be a non-negative number.");
+        return -1;
+    }
+    ancientSouls = Math.floor(ancientSouls);
+    var heroSouls = parseFloat( $("#inputHeroSouls").val() || 0 );
+    if( !(heroSouls>=0) ) {
+        alert("Calculation failed. Hero Souls must be a non-negative number.");
+        return -1;
+    }
+    heroSouls = Math.floor(heroSouls);
+    var autoClikers = parseFloat( $("#inputAutoClikers").val() || 0 );
+    if( !(autoClikers>=0) ) {
+        alert("Calculation failed. Auto Clikers must be a non-negative number.");
+        return -1;
+    }
+    autoClikers = Math.floor(autoClikers);
+    // zone used for calculation
+    var zone = "highest";
+    if($("#inputStartingZone").is(":checked")) {
+        zone = "starting";
+    } else   if($("#inputCustomZone").is(":checked")) {
+        zone = "custom";
+    }
+    var zoneOverride = parseFloat( $("#inputZoneOverride").val() || 0 );
+    if( isNaN(zoneOverride) || zoneOverride<0 ) {
+        /*setDefaults();*/
+        $("#inputZoneOverride").val(0);
+        zoneOverride = 0;
+        alert("Please input a positive number. The zone override value has been reset.");
+    }
+    zoneOverride = Math.floor(zoneOverride);
+    // build type used for calculation
+    var build = "active";
+    var custom = "0";
+    if($("#inputIdleBuild").is(":checked")) {
+        zone = "idle";
+    } else   if($("#inputHybridBuild").is(":checked")) {
+        zone = "hybrid";
+    } else   if($("#inputCustomBuild").is(":checked")) {
+        zone = "custom";
+        custom = $( "#inputCustomBuild" ).val();
+    }
+    // custom build inputs
+    var idleDPS = parseFloat( $("#inputIdleDPS").val() || 0 );
+    if( !(idleDPS>=0) || (idleDPS>100) ) {
+        alert("Calculation failed. Idle DPS must be between 0 and 100.");
+        return -1;
+    }
+    idleDPS = Math.floor(idleDPS);
+    var hybridDPS = parseFloat( $("#inputHybridDPS").val() || 0 );
+    if( !(hybridDPS>=0) || (hybridDPS>100) ) {
+        alert("Calculation failed. Hybrid DPS must be between 0 and 100.");
+        return -1;
+    }
+    hybridDPS = Math.floor(hybridDPS);
+    var activeDPS = parseFloat( $("#inputActiveDPS").val() || 0 );
+    if( !(activeDPS>=0) || (activeDPS>100) ) {
+        alert("Calculation failed. Active DPS must be between 0 and 100.");
+        return -1;
+    }
+    activeDPS = Math.floor(activeDPS);
+    var idleGold = parseFloat( $("#inputIdleGold").val() || 0 );
+    if( !(idleGold>=0) || (idleGold>100) ) {
+        alert("Calculation failed. Idle Gold must be between 0 and 100.");
+        return -1;
+    }
+    idleGold = Math.floor(idleGold);
+    var hybridGold = parseFloat( $("#inputHybridGold").val() || 0 );
+    if( !(hybridGold>=0) || (hybridGold>100) ) {
+        alert("Calculation failed. Hybrid Gold must be between 0 and 100.");
+        return -1;
+    }
+    hybridGold = Math.floor(hybridGold);
+    var activeGold = parseFloat( $("#inputActiveGold").val() || 0 );
+    if( !(activeGold>=0) || (activeGold>100) ) {
+        alert("Calculation failed. Active Gold must be between 0 and 100.");
+        return -1;
+    }
+    activeGold = Math.floor(activeGold);
+    var heroSoul = parseFloat( $("#inputHeroSoul").val() || 0 );
+    if( !(heroSoul>=0) || (heroSoul>100) ) {
+        alert("Calculation failed. Hero Souls must be between 0 and 100.");
+        return -1;
+    }
+    heroSoul = Math.floor(heroSoul);
+    var skills = parseFloat( $("#inputSkills").val() || 0 );
+    if( !(skills>=0) || (skills>100) ) {
+        alert("Calculation failed. Skills must be between 0 and 100.");
+        return -1;
+    }
+    skills = Math.floor(skills);
+    var progression = parseFloat( $("#inputProgression").val() || 0 );
+    if( !(progression>=0) || (progression>100) ) {
+        alert("Calculation failed. Progression must be between 0 and 100.");
+        return -1;
+    }
+    progression = Math.floor(progression);
+    var rubies = parseFloat( $("#inputRubies").val() || 0 );
+    if( !(rubies>=0) || (rubies>100) ) {
+        alert("Calculation failed. Rubies must be between 0 and 100.");
+        return -1;
+    }
+    rubies = Math.floor(rubies);
+    // setting outsider levels
+    var xyliqilLevel = parseFloat( $("#inputXyliqilLevel").val() || 0 );
+    if( !(xyliqilLevel>=0) ) {
+        alert("Calculation failed. Xyliqil Level must be a non-negative number.");
+        return -1;
+    }
+    xyliqilLevel = Math.floor(xyliqilLevel);
+    var chorLevel = parseFloat( $("#inputChorLevel").val() || 0 );
+    if( !(chorLevel>=0) ) {
+        alert("Calculation failed. Chor'gorloth Level must be a non-negative number.");
+        return -1;
+    }
+    chorLevel = Math.floor(chorLevel);
+    var phanLevel = parseFloat( $("#inputPhanLevel").val() || 0 );
+    if( !(phanLevel>=0) ) {
+        alert("Calculation failed. Phandoryss Level must be a non-negative number.");
+        return -1;
+    }
+    phanLevel = Math.floor(phanLevel);
+    var ponyLevel = parseFloat( $("#inputPonyLevel").val() || 0 );
+    if( !(ponyLevel>=0) ) {
+        alert("Calculation failed. Ponyboy Level must be a non-negative number.");
+        return -1;
+    }
+    ponyLevel = Math.floor(ponyLevel);
+    var borbLevel = parseFloat( $("#inputBorbLevel").val() || 0 );
+    if( !(borbLevel>=0) ) {
+        alert("Calculation failed. Borb Level must be a non-negative number.");
+        return -1;
+    }
+    borbLevel = Math.floor(borbLevel);
+    var rhageistLevel = parseFloat( $("#inputRhageistLevel").val() || 0 );
+    if( !(rhageistLevel>=0) ) {
+        alert("Calculation failed. Rhageist Level must be a non-negative number.");
+        return -1;
+    }
+    rhageistLevel = Math.floor(rhageistLevel);
+    var kariquaLevel = parseFloat( $("#inputKariquaLevel").val() || 0 );
+    if( !(kariquaLevel>=0) ) {
+        alert("Calculation failed. K'Ariqua Level must be a non-negative number.");
+        return -1;
+    }
+    kariquaLevel = Math.floor(kariquaLevel);
+    var orphalasLevel = parseFloat( $("#inputOrphalasLevel").val() || 0 );
+    if( !(orphalasLevel>=0) ) {
+        alert("Calculation failed. Orphalas Level must be a non-negative number.");
+        return -1;
+    }
+    orphalasLevel = Math.floor(orphalasLevel);
+    var senakhanLevel = parseFloat( $("#inputSenakhanLevel").val() || 0 );
+    if( !(senakhanLevel>=0) ) {
+        alert("Calculation failed. Sen-Akhan Level must be a non-negative number.");
+        return -1;
+    }
+    senakhanLevel = Math.floor(senakhanLevel);
+    // return
+    return [ancientSouls, zone, zoneOverride, build, custom, idleDPS, hybridDPS, activeDPS, idleGold, hybridGold, activeGold, heroSoul, skills, progression, rubies, xyliqilLevel, chorLevel, phanLevel, ponyLevel, borbLevel, rhageistLevel, kariquaLevel, orphalasLevel, senakhanLevel];
+}
+      
 /*
 function test() {
     var cases = [0,1,10,100,1000,10000,12500,15000,17500,20000,50000,100000,200000,300000,400000,500000];
@@ -510,7 +680,7 @@ function test() {
     console.log(readout);
 }
 */
-$("#ancientsSouls").keyup(function(ev) {
+$("#inputAncientSouls").keyup(function(ev) {
     if (ev.which === 13) refresh();
 });
 
