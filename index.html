@@ -30,15 +30,15 @@
 							<hr>
 							<div class="numberInput">
 								<div id="TP">TP: 2.0000%</div>
-								<input value="0" id="ancientsSouls" type="text"> Ancient Souls
-								<br><input value="0" id="heroSouls" type="text"> Hero Souls
-								<br><input value="0" id="autoClikers" type="text"> #+1 Auto Clicker(s)
+								<input value="0" id="inputAncientSouls" type="text"> Ancient Souls
+								<br><input value="0" id="inputHeroSouls" type="text"> Hero Souls
+								<br><input value="0" id="inputAutoClikers" type="text"> #+1 Auto Clicker(s)
 							</div>
 							<hr>
 							<form>
-								<input type="radio" name="zone" id="startingZone" class="checkbox" onclick="refresh()"> Starting Zone
-								<br><input type="radio" name="zone" id="highestZone" class="checkbox" checked onclick="refresh()"> Highest Zone (estimate)
-								<br><input type="radio" name="zone" id="customZone" class="checkbox" onclick="refresh()"> Custom Zone (adjust below)
+								<input type="radio" name="zone" id="inputStartingZone" class="checkbox" onclick="refresh()"> Starting Zone
+								<br><input type="radio" name="zone" id="inputHighestZone" class="checkbox" checked onclick="refresh()"> Highest Zone (estimate)
+								<br><input type="radio" name="zone" id="inputCustomZone" class="checkbox" onclick="refresh()"> Custom Zone (adjust below)
 							</form>
 							<div class="numberInput">
 								<p>Zone override:</p>
@@ -46,10 +46,10 @@
 							</div>
 							<hr>
 							<form>
-								<input type="radio" name="build" id="idleBuild" class="checkbox" onclick="refresh()"> Idle Build
-								<br><input type="radio" name="build" id="hybridBuild" class="checkbox" onclick="refresh()"> Hybrid Build
-								<br><input type="radio" name="build" id="activeBuild" class="checkbox" checked onclick="refresh()"> Active Build
-								<br><input type="radio" name="build" id="customBuild" class="checkbox" onclick="refresh()"> Custom Build (adjust below)
+								<input type="radio" name="build" id="inputIdleBuild" class="checkbox" onclick="refresh()"> Idle Build
+								<br><input type="radio" name="build" id="inputHybridBuild" class="checkbox" onclick="refresh()"> Hybrid Build
+								<br><input type="radio" name="build" id="inputActiveBuild" class="checkbox" checked onclick="refresh()"> Active Build
+								<br><input type="radio" name="build" id="inputCustomBuild" class="checkbox" onclick="refresh()"> Custom Build (adjust below)
 							</form>
 							<br><button id="calculateButton" onclick="refresh()">Calculate</button>
 						</div>
